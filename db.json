@@ -1,0 +1,83 @@
+{
+  "sellers": [],
+  "details": [
+    {
+      "fullname": "Adithya",
+      "username": "adithyareddy",
+      "email": "aaa@gmail.com",
+      "number": "9490723647",
+      "password": "vdfb",
+      "gender": "",
+      "nameOnCard": "Adithya",
+      "ccNum": "1234567890123456",
+      "expMonYear": "2022-12",
+      "cvv": "111",
+      "id": 1
+    },
+    {
+      "fullname": "Adithya",
+      "username": "adithyareddy",
+      "email": "aaa@gmail.com",
+      "number": "9490723647",
+      "password": "fdg",
+      "gender": "",
+      "nameOnCard": "Adithya",
+      "ccNum": "1234567890123456",
+      "expMonYear": "2022-12",
+      "cvv": "111",
+      "id": 2
+    },
+    {
+      "fullname": "Adithya",
+      "username": "adithyareddy",
+      "email": "aaa@gmail.com",
+      "number": "9490723647",
+      "password": "kjjkb",
+      "gender": "",
+      "nameOnCard": "Adithya",
+      "ccNum": "1234567890123456",
+      "expMonYear": "2022-12",
+      "cvv": "111",
+      "id": 3
+    },
+    {
+      "fullname": "Adithya",
+      "username": "adithyareddy",
+      "email": "aaa@gmail.com",
+      "number": "9490723647",
+      "password": "sdjf",
+      "gender": "",
+      "nameOnCard": "Adithya",
+      "ccNum": "1234567890123456",
+      "expMonYear": "2022-12",
+      "cvv": "111",
+      "id": 4
+    },
+    {
+      "fullname": "Adithya",
+      "username": "adithyareddy",
+      "email": "aaa@gmail.com",
+      "number": "9490723647",
+      "password": "sdjf",
+      "gender": "",
+      "nameOnCard": "Adithya",
+      "ccNum": "1234567890123456",
+      "expMonYear": "2022-12",
+      "cvv": "111",
+      "id": 5
+    },
+    {
+      "fullname": "Adithya",
+      "username": "adithyareddy",
+      "email": "aaa@gmail.com",
+      "number": "9490723647",
+      "password": "sdd",
+      "gender": "",
+      "nameOnCard": "Adithya",
+      "ccNum": "1234567890123456",
+      "expMonYear": "2022-12",
+      "cvv": "111",
+      "id": 6
+    }
+  ]
+}

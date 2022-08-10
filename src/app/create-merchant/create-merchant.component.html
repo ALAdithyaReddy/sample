@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchant Registration</title>
+    <link rel="stylesheet" href="create-merchant.component.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial;
+            font-size: 17px;
+            padding: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin: 0 1px;
+        }
+
+        .col-25 {
+            -ms-flex: 25%;
+            flex: 25%;
+        }
+
+        .col-50 {
+            -ms-flex: 50%;
+            flex: 50%;
+        }
+
+        .col-75 {
+            -ms-flex: 75%;
+            flex: 75%;
+        }
+
+        .col-25,
+        .col-50,
+        .col-75 {
+            padding: 0;
+        }
+
+        .container1 {
+            background-color: #f2f2f2;
+            padding: 5px 20px 15px 20px;
+            border: 1px solid lightgray;
+            border-radius: 3px;
+        }
+
+        input[type=text] {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="month"] {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        label {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .icon-container {
+            padding: 0;
+            font-size: 38px;
+        }
+
+    </style>
+</head>
+<head>
+    <title>Merchant Registration</title>
+    <link rel="stylesheet" href="create-merchant.component.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title"><b>Merchant Registration</b></div>
+        <form (ngSubmit)="onSubmit()">
+             
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required [(ngModel)]="sellers.fullname" [ngModelOptions]="{standalone: true}">
+                </div>
+                
+                <div class="input-box">
+                    <span class="details">Username</span>
+                    <input type="text" name="username" id="username" placeholder="Enter your username" required [(ngModel)]="sellers.username" [ngModelOptions]="{standalone: true}">
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required [(ngModel)]="sellers.email" [ngModelOptions]="{standalone: true}">
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Mobile Number</span>
+                    <input type="tel" name="number" id="mobileNumber" placeholder="Enter your number" maxlength="10" pattern="[789][0-9]{9}" required [(ngModel)]="sellers.number" [ngModelOptions]="{standalone: true}">
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="password" name="psw" id="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Confirm Password</span>
+                    <input type="password" name="psw" id="confirmPsw" placeholder="Confirm Password" required [(ngModel)]="sellers.password" [ngModelOptions]="{standalone: true}">
+                </div>
+            </div>
+
+            <div class="gender-details">
+                <input type="radio" name="gender" id="dot-1">
+                <input type="radio" name="gender" id="dot-2">
+                <input type="radio" name="gender" id="dot-3">
+                <span class="gender-title" [(ngModel)]="sellers.gender" [ngModelOptions]="{standalone: true}">Gender</span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                    </label>
+
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">Prefer not to say</span>
+                    </label>
+                </div>
+
+                <div class="row">
+                    <div class="col-75">
+                        <div class="container1">
+                                <div class="col-50">
+                                    <h3>Bank Details</h3>
+                                    <br>
+                                    <label for="fname">Accepted Cards</label>
+                                    <div class="icon-container">
+                                        <i class="fa fa-cc-visa" style="color: navy;"></i> &nbsp;
+                                        <i class="fa fa-cc-amex" style="color: blue;"></i> &nbsp;
+                                        <i class="fa fa-cc-mastercard" style="color: red;"></i> &nbsp;
+                                        <i class="fa fa-cc-discover" style="color: orange;"></i>
+                                    </div>
+                                    <br>
+                                    <label for="cname">Name on Card</label>
+                                    <input type="text" name="cardname" id="cname" placeholder="Enter name on your card" required [(ngModel)]="sellers.nameOnCard" [ngModelOptions]="{standalone: true}">
+                                    <br>
+                                    <label for="ccnum">Credit Card number</label>
+                                    <input type="text" name="cardnumber" id="ccnum" maxlength="16" placeholder="XXXX-XXXX-XXXX-XXXX" required [(ngModel)]="sellers.ccNum" [ngModelOptions]="{standalone: true}">
+                                    <br>
+                                    <label for="expmonthyear">Expiry Month / Year</label>
+                                    <input type="month" name="expmonthyear" id="expmonthyear" placeholder="Enter expiry month & year" required [(ngModel)]="sellers.expMonYear" [ngModelOptions]="{standalone: true}">
+                                    <br>
+            
+                                    <div class="row1">
+                                        <div class="col-50">
+                                            <label for="cvv" >CVV</label>
+                                            <input type="password" name="cvv" id="cvv" max="999" pattern="[0-9]{3}" placeholder="Enter CVV" maxlength="3" required [(ngModel)]="sellers.cvv" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="button">
+                                    <button type="submit" value="Register">Register</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
